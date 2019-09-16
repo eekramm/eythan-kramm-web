@@ -1,0 +1,439 @@
+/* resets all default formating */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: fixed;
+}
+
+.social-media-container {
+  /* border: 5px solid blue; */
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+/* the main background image of the page */
+.hero {
+  /* border: 10px solid red; */
+  background-image: url(./images/bi-curl.jpeg);
+  height: 100vh;
+  width: 100%;
+}
+
+/* styles the menu button */
+#edit-btn {
+  color: #9c9c9c;
+  font-size: 60px;
+  margin-left: 25px;
+  margin-top: 18px;
+  z-index: 15;
+}
+
+/* changes the color of the menu button and cursor to pointer on hover */
+#edit-btn:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+/* toggled in index.js to hide the menu btn and not take up space */
+.edit-btn-hide {
+  position: absolute;
+  left: -999em;
+}
+
+/* hides menu and *content* */
+.menu {
+  visibility: hidden;
+}
+
+/* toggled in index.js to show the menu */
+.menu-show {
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 100vh;
+  position: fixed;
+  visibility: visible;
+  width: 25%;
+  z-index: 10;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.close-menu {
+  color: #9c9c9c;
+  font-size: 30px;
+  padding-right: 20px;
+  text-align: end;
+}
+
+.close-menu:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.back-ground-img {
+  border-top: 1px solid;
+  padding: 20px 0px 20px 40px;
+}
+
+.back-ground-img:hover {
+  cursor: pointer;
+}
+
+.back-ground-img-gallery {
+  visibility: hidden;
+}
+
+.back-ground-img-gallery-show {
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-wrap: wrap;
+  height: 90%;
+  margin-left: 26%;
+  margin-top: 2.5%;
+  overflow: auto;
+  padding-left: 1%;
+  padding-top: 1%;
+  position: relative;
+  top: 0;
+  transition: 0.3s;
+  visibility: visible;
+  width: 60%;
+}
+
+.back-ground-img-gallery > .close-gallery {
+  padding-left: 1%;
+}
+
+.close-gallery {
+  color: #9c9c9c;
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+}
+
+.close-gallery:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.image-option {
+  height: 30%;
+  margin: 1%;
+  width: 30%;
+}
+.image-option:hover {
+  border: 5px solid #fff;
+  cursor: pointer;
+}
+
+.font {
+  border-top: 1px solid;
+  padding: 20px 0px 20px 40px;
+}
+
+.font:hover {
+  cursor: pointer;
+}
+
+.font-gallery {
+  visibility: hidden;
+}
+
+.font-gallery-show {
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-wrap: wrap;
+  height: 30%;
+  justify-content: center;
+  margin-left: 26%;
+  margin-top: 5.5%;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  transition: 0.3s;
+  width: 20%;
+  visibility: visible;
+}
+
+.font-gallery > .close-fonts {
+  justify-content: left;
+}
+
+.font-option {
+  border: 1px solid;
+  color: #9c9c9c;
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  height: 33.3%;
+  justify-content: center;
+  margin: 3%;
+  text-align: center;
+  width: 40%;
+}
+
+.font-option:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.close-fonts {
+  color: #9c9c9c;
+  font-size: 25px;
+  position: relative;
+  top: 0;
+}
+
+.close-fonts:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.modak {
+  font-family: "Modak", cursive;
+}
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+}
+
+.inconsolata {
+  font-family: "Inconsolata", monospace;
+}
+
+.josefin-sans {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.anton {
+  font-family: "Anton", sans-serif;
+}
+
+.dancing-script {
+  font-family: "Dancing Script", cursive;
+}
+
+.shadows-into-light {
+  font-family: "Shadows Into Light", cursive;
+}
+
+.amatic-sc {
+  font-family: "Amatic SC", cursive;
+}
+
+.saira-stencil-one {
+  font-family: "Saira Stencil One", cursive;
+}
+
+.color-scheme {
+  border-top: 1px solid;
+  padding: 20px 0px 20px 40px;
+}
+
+.color-scheme:hover {
+  cursor: pointer;
+}
+
+.color-gallery {
+  visibility: hidden;
+}
+
+.color-gallery-show {
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: row;
+  height: 10%;
+  justify-content: space-around;
+  margin-left: 26%;
+  margin-top: 8.75%;
+  position: absolute;
+  top: 0;
+  transition: 0.2s;
+  width: 20%;
+  visibility: visible;
+}
+
+.color-picker {
+  height: 50%;
+  width: 25%;
+}
+
+.color-picker:hover {
+  border: 5px solid #fff;
+  cursor: pointer;
+}
+
+.close-color {
+  color: #9c9c9c;
+  font-size: 25px;
+  /* position: absolute; */
+  top: 0;
+}
+
+.close-color:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.site-menu-dropdown {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: 20px 0px 20px 40px;
+}
+
+.site-menu-dropdown > #down-arrow-icon {
+  color: #9c9c9c;
+  font-size: 25px;
+  padding-left: 77%;
+}
+
+.site-menu-dropdown > #down-arrow-icon:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+#menu-icon {
+  color: #9c9c9c;
+  padding-right: 10px;
+}
+
+#menu-icon:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.social-media {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  float: right;
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100px;
+  z-index: 10;
+}
+
+.facebook {
+  align-items: center;
+  background-color: #3b579c;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-radius: 35px 0px 0px 35px;
+  color: #fff;
+  display: flex;
+  float: right;
+  font-size: 40px;
+  height: 70px;
+  justify-content: center;
+  width: 60px;
+}
+
+.facebook:hover {
+  color: #000;
+  cursor: pointer;
+  width: 80px;
+}
+
+.twitter {
+  align-items: center;
+  background-color: #28aae2;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-radius: 35px 0px 0px 35px;
+  color: #fff;
+  display: flex;
+  float: right;
+  font-size: 40px;
+  height: 70px;
+  justify-content: center;
+  width: 60px;
+}
+
+.twitter:hover {
+  color: #000;
+  cursor: pointer;
+  width: 80px;
+}
+
+.instagram {
+  align-items: center;
+  background-color: #8141b9;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-radius: 35px 0px 0px 35px;
+  color: #fff;
+  display: flex;
+  float: right;
+  font-size: 40px;
+  height: 70px;
+  justify-content: center;
+  width: 60px;
+}
+
+.instagram:hover {
+  color: #000;
+  cursor: pointer;
+  width: 80px;
+}
+
+.linkedin {
+  align-items: center;
+  background-color: #0077b5;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-radius: 35px 0px 0px 35px;
+  color: #fff;
+  display: flex;
+  float: right;
+  font-size: 40px;
+  height: 70px;
+  justify-content: center;
+  width: 60px;
+}
+
+.linkedin:hover {
+  color: #000;
+  cursor: pointer;
+  width: 80px;
+}
+
+.github {
+  align-items: center;
+  background-color: #252a2f;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-radius: 35px 0px 0px 35px;
+  color: #fff;
+  display: flex;
+  float: right;
+  font-size: 40px;
+  height: 70px;
+  justify-content: center;
+  width: 60px;
+}
+
+.github:hover {
+  color: #000;
+  cursor: pointer;
+  width: 80px;
+}
