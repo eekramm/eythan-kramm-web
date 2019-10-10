@@ -17,10 +17,18 @@ body {
   position: relative;
 }
 
+.header {
+  /* border: 1px solid red; */
+  height: 10vh;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
 /* the main background image of the page */
 .hero {
   /* border: 10px solid red; */
-  background-image: url(./images/bi-curl.jpeg);
+  background-image: url(../images/bi-curl.jpeg);
   height: 100vh;
   width: 100%;
 }
@@ -42,6 +50,60 @@ body {
 
 /* toggled in index.js to hide the menu btn and not take up space */
 .edit-btn-hide {
+  position: absolute;
+  left: -999em;
+}
+
+#about-me-btn {
+  color: #9c9c9c;
+  font-size: 50px;
+  margin-left: 25px;
+  margin-top: 18px;
+  z-index: 15;
+}
+
+#about-me-btn:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.about-me-btn-hide {
+  position: absolute;
+  left: -999em;
+}
+
+#portfolio-btn {
+  color: #9c9c9c;
+  font-size: 50px;
+  margin-left: 25px;
+  margin-top: 18px;
+  z-index: 15;
+}
+
+#portfolio-btn:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.portfolio-btn-hide {
+  position: absolute;
+  left: -999em;
+}
+
+#contact-me-btn {
+  color: #9c9c9c;
+  font-size: 50px;
+  margin-left: 25px;
+  margin-top: 18px;
+  z-index: 15;
+}
+
+#contact-me-btn:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.contact-me-btn-hide {
   position: absolute;
   left: -999em;
 }
@@ -78,12 +140,18 @@ body {
   cursor: pointer;
 }
 
+.back-ground-img-none {
+  display: none;
+}
+
 .back-ground-img {
   border-top: 1px solid;
   padding: 20px 0px 20px 40px;
 }
 
 .back-ground-img:hover {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2),
+    1px -1px 8px rgba(0, 0, 0, 0.2), -1px 1px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
@@ -92,6 +160,9 @@ body {
 }
 
 .back-ground-img-gallery-show {
+  box-shadow: 1px 1px 8px rgba(255, 255, 255, 0.2),
+    -1px -1px 8px rgba(255, 255, 255, 0.2),
+    1px -1px 8px rgba(255, 255, 255, 0.2), -1px 1px 8px rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-wrap: wrap;
@@ -106,6 +177,7 @@ body {
   transition: 0.3s;
   visibility: visible;
   width: 60%;
+  z-index: 2;
 }
 
 .back-ground-img-gallery > .close-gallery {
@@ -130,8 +202,13 @@ body {
   width: 30%;
 }
 .image-option:hover {
-  border: 5px solid #fff;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5), -1px -1px 8px rgba(0, 0, 0, 0.5),
+    1px -1px 8px rgba(0, 0, 0, 0.5), -1px 1px 8px rgba(0, 0, 0, 0.5);
   cursor: pointer;
+}
+
+.font-none {
+  display: none;
 }
 
 .font {
@@ -140,6 +217,8 @@ body {
 }
 
 .font:hover {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2),
+    1px -1px 8px rgba(0, 0, 0, 0.2), -1px 1px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
@@ -148,6 +227,9 @@ body {
 }
 
 .font-gallery-show {
+  box-shadow: 1px 1px 8px rgba(255, 255, 255, 0.2),
+    -1px -1px 8px rgba(255, 255, 255, 0.2),
+    1px -1px 8px rgba(255, 255, 255, 0.2), -1px 1px 8px rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-wrap: wrap;
@@ -237,12 +319,18 @@ body {
   font-family: "Saira Stencil One", cursive;
 }
 
+.color-scheme-none {
+  display: none;
+}
+
 .color-scheme {
   border-top: 1px solid;
   padding: 20px 0px 20px 40px;
 }
 
 .color-scheme:hover {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2),
+    1px -1px 8px rgba(0, 0, 0, 0.2), -1px 1px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
@@ -252,6 +340,9 @@ body {
 
 .color-gallery-show {
   align-items: center;
+  box-shadow: 1px 1px 8px rgba(255, 255, 255, 0.2),
+    -1px -1px 8px rgba(255, 255, 255, 0.2),
+    1px -1px 8px rgba(255, 255, 255, 0.2), -1px 1px 8px rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-direction: row;
@@ -264,6 +355,39 @@ body {
   transition: 0.2s;
   width: 20%;
   visibility: visible;
+}
+
+.color-gallery-info {
+  visibility: hidden;
+}
+
+.color-gallery-info-show {
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  height: 10%;
+  justify-content: space-around;
+  margin-left: 31%;
+  margin-top: 14.75%;
+  position: absolute;
+  top: 0;
+  width: 10%;
+  visibility: visible;
+}
+
+.color-gallery-info-show::after {
+  border-bottom: 15px solid rgba(255, 255, 255, 0.8);
+  border-right: 10px solid transparent;
+  border-top: 0px solid transparent;
+  border-left: 10px solid transparent;
+  content: " ";
+  height: 0px;
+  left: 15%;
+  position: absolute;
+  bottom: 100%;
+  width: 0px;
 }
 
 .color-picker {
@@ -288,19 +412,28 @@ body {
   cursor: pointer;
 }
 
+.site-menu-dropdown-none {
+  display: none;
+}
+
 .site-menu-dropdown {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 20px 0px 20px 40px;
 }
 
-.site-menu-dropdown > #down-arrow-icon {
+.site-menu-dropdown:hover {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2),
+    1px -1px 8px rgba(0, 0, 0, 0.2), -1px 1px 8px rgba(0, 0, 0, 0.2);
+}
+
+.site-menu-dropdown > #right-arrow-icon {
   color: #9c9c9c;
   font-size: 25px;
   padding-left: 77%;
 }
 
-.site-menu-dropdown > #down-arrow-icon:hover {
+.site-menu-dropdown > #right-arrow-icon:hover {
   color: #000;
   cursor: pointer;
 }
@@ -315,7 +448,126 @@ body {
   cursor: pointer;
 }
 
+.collapse-site-menu {
+  display: none;
+}
+
+.collapse-site-menu-show {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  color: #9c9c9c;
+  display: flex;
+  font-size: 50px;
+  padding: 5px 0px 5px 40px;
+}
+
+.collapse-site-menu:hover {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2),
+    1px -1px 8px rgba(0, 0, 0, 0.2), -1px 1px 8px rgba(0, 0, 0, 0.2);
+  color: #000;
+  cursor: pointer;
+}
+
+.about-me {
+  display: none;
+}
+
+.about-me-show {
+  border-bottom: 1px solid;
+  display: flex;
+  padding: 20px 0px 20px 40px;
+}
+
+.about-me:hover {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2),
+    1px -1px 8px rgba(0, 0, 0, 0.2), -1px 1px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#about-me-site-menu-icon {
+  color: #9c9c9c;
+  padding-right: 15px;
+}
+
+#about-me-site-menu-icon:hover {
+  color: #000;
+}
+
+.portfolio {
+  display: none;
+}
+
+.portfolio-show {
+  border-bottom: 1px solid;
+  display: flex;
+  padding: 20px 0px 20px 40px;
+}
+
+.portfolio:hover {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2),
+    1px -1px 8px rgba(0, 0, 0, 0.2), -1px 1px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#portfolio-site-menu-icon {
+  color: #9c9c9c;
+  padding-right: 15px;
+}
+
+#portfolio-site-menu-icon:hover {
+  color: #000;
+}
+
+.contact-me {
+  display: none;
+}
+
+.contact-me-show {
+  border-bottom: 1px solid;
+  display: flex;
+  padding: 20px 0px 20px 40px;
+}
+
+.contact-me:hover {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2),
+    1px -1px 8px rgba(0, 0, 0, 0.2), -1px 1px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#contact-me-site-menu-icon {
+  color: #9c9c9c;
+  padding-right: 15px;
+}
+
+#contact-me-site-menu-icon:hover {
+  color: #000;
+}
+
+.title {
+  /* border: 1px solid red; */
+  color: #363636;
+  display: flex;
+  font-size: 100px;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+}
+
+.right-arrow {
+  color: rgba(54, 54, 54, 0.5);
+  font-size: 250px;
+  position: fixed;
+  width: 200px;
+}
+
+.right-arrow:hover {
+  cursor: pointer;
+  /* color: rgba(255, 255, 255, 0.3); */
+  color: #9c9c9c;
+}
+
 .social-media {
+  /* border: 1px solid red; */
   display: flex;
   align-items: flex-end;
   flex-direction: column;

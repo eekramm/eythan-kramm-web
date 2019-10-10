@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  border: 1px solid red;
+  height: 10vh;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+#edit-btn {
+  color: #9c9c9c;
+  font-size: 60px;
+  margin-left: 25px;
+  margin-top: 18px;
+  z-index: 15;
+}
+
+#edit-btn:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.edit-btn-hide {
+  position: absolute;
+  left: -999em;
+}
+
+#about-me-btn {
+  color: #9c9c9c;
+  font-size: 50px;
+  margin-left: 25px;
+  margin-top: 18px;
+  z-index: 15;
+}
+
+#about-me-btn:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.about-me-btn-hide {
+  position: absolute;
+  left: -999em;
+}
+
+#portfolio-btn {
+  color: #9c9c9c;
+  font-size: 50px;
+  margin-left: 25px;
+  margin-top: 18px;
+  z-index: 15;
+}
+
+#portfolio-btn:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.portfolio-btn-hide {
+  position: absolute;
+  left: -999em;
+}
+
+#contact-me-btn {
+  color: #9c9c9c;
+  font-size: 50px;
+  margin-left: 25px;
+  margin-top: 18px;
+  z-index: 15;
+}
+
+#contact-me-btn:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.contact-me-btn-hide {
+  position: absolute;
+  left: -999em;
+}

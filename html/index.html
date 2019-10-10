@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Eythan Kramm</title>
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="../css/index.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -16,9 +16,20 @@
     />
   </head>
   <body>
+    <section class="header">
+      <i class="fa fa-pencil-square" id="edit-btn" aria-hidden="true"></i>
+      <a href="../html/about.html"
+        ><i class="fa fa-user-circle-o" id="about-me-btn" aria-hidden="true"></i
+      ></a>
+      <i class="fa fa-briefcase" id="portfolio-btn" aria-hidden="true"></i>
+      <i
+        class="fa fa-address-book-o"
+        id="contact-me-btn"
+        aria-hidden="true"
+      ></i>
+    </section>
     <div class="social-media-container">
       <section class="hero">
-        <i class="fa fa-pencil-square" id="edit-btn" aria-hidden="true"></i>
         <section class="menu">
           <div class="menu-content">
             <span class="close-menu">&times</span>
@@ -35,43 +46,70 @@
               >COLOR SCHEME</span
             >
             <span class="site-menu-dropdown" id="changeble-text"
-              ><i class="fa fa-bars" id="menu-icon" aria-hidden="true"></i>Menu
+              ><i class="fa fa-bars" id="menu-icon" aria-hidden="true"></i>MENU
               <i
-                class="fa fa-sort-desc"
-                id="down-arrow-icon"
+                class="fa fa-caret-right"
+                id="right-arrow-icon"
                 aria-hidden="true"
               ></i
             ></span>
+            <span class="collapse-site-menu"
+              ><i class="fa fa-caret-left" aria-hidden="true"></i
+            ></span>
+            <span class="about-me"
+              ><i
+                class="fa fa-user-circle-o"
+                id="about-me-site-menu-icon"
+                aria-hidden="true"
+              ></i
+              >About Me</span
+            >
+            <span class="portfolio"
+              ><i
+                class="fa fa-briefcase"
+                id="portfolio-site-menu-icon"
+                aria-hidden="true"
+              ></i
+              >Portfolio</span
+            >
+            <span class="contact-me">
+              <i
+                class="fa fa-address-book-o"
+                id="contact-me-site-menu-icon"
+                aria-hidden="true"
+              ></i
+              >Contact Me</span
+            >
           </div>
           <!-- end menu-content -->
         </section>
         <!-- end menu -->
         <section class="img-gallery back-ground-img-gallery">
           <div class="close-gallery">&times</div>
-          <img class="image-option" src="./images/beach.jpg" alt="" />
-          <img class="image-option" src="./images/bi-curl.jpeg" alt="" />
-          <img class="image-option" src="./images/bridge.jpg" alt="" />
-          <img class="image-option" src="./images/city1.jpg" alt="" />
-          <img class="image-option" src="./images/city2.jpg" alt="" />
-          <img class="image-option" src="./images/dolphin.jpg" alt="" />
-          <img class="image-option" src="./images/friends1.jpg" alt="" />
-          <img class="image-option" src="./images/lion.jpg" alt="" />
-          <img class="image-option" src="./images/peir.jpg" alt="" />
-          <img class="image-option" src="./images/pets1.jpg" alt="" />
-          <img class="image-option" src="./images/pets2.jpg" alt="" />
-          <img class="image-option" src="./images/pets3.jpg" alt="" />
-          <img class="image-option" src="./images/pets4.jpg" alt="" />
-          <img class="image-option" src="./images/pets5.jpg" alt="" />
-          <img class="image-option" src="./images/rustic1.jpg" alt="" />
-          <img class="image-option" src="./images/rustic2.jpg" alt="" />
-          <img class="image-option" src="./images/rustic3.jpg" alt="" />
-          <img class="image-option" src="./images/rustic4.jpg" alt="" />
-          <img class="image-option" src="./images/tree.jpg" alt="" />
-          <img class="image-option" src="./images/turtle.jpg" alt="" />
-          <img class="image-option" src="./images/wood1.jpg" alt="" />
-          <img class="image-option" src="./images/wood2.jpg" alt="" />
-          <img class="image-option" src="./images/wood3.jpg" alt="" />
-          <img class="image-option" src="./images/wood4.jpg" alt="" />
+          <img class="image-option" src="../images/beach.jpg" alt="" />
+          <img class="image-option" src="../images/bi-curl.jpeg" alt="" />
+          <img class="image-option" src="../images/bridge.jpg" alt="" />
+          <img class="image-option" src="../images/city1.jpg" alt="" />
+          <img class="image-option" src="../images/city2.jpg" alt="" />
+          <img class="image-option" src="../images/dolphin.jpg" alt="" />
+          <img class="image-option" src="../images/friends1.jpg" alt="" />
+          <img class="image-option" src="../images/lion.jpg" alt="" />
+          <img class="image-option" src="../images/peir.jpg" alt="" />
+          <img class="image-option" src="../images/pets1.jpg" alt="" />
+          <img class="image-option" src="../images/pets2.jpg" alt="" />
+          <img class="image-option" src="../images/pets3.jpg" alt="" />
+          <img class="image-option" src="../images/pets4.jpg" alt="" />
+          <img class="image-option" src="../images/pets5.jpg" alt="" />
+          <img class="image-option" src="../images/rustic1.jpg" alt="" />
+          <img class="image-option" src="../images/rustic2.jpg" alt="" />
+          <img class="image-option" src="../images/rustic3.jpg" alt="" />
+          <img class="image-option" src="../images/rustic4.jpg" alt="" />
+          <img class="image-option" src="../images/tree.jpg" alt="" />
+          <img class="image-option" src="../images/turtle.jpg" alt="" />
+          <img class="image-option" src="../images/wood1.jpg" alt="" />
+          <img class="image-option" src="../images/wood2.jpg" alt="" />
+          <img class="image-option" src="../images/wood3.jpg" alt="" />
+          <img class="image-option" src="../images/wood4.jpg" alt="" />
         </section>
         <section class="font-gallery">
           <div class="close-fonts">&times</div>
@@ -86,13 +124,18 @@
           <p class="font-option amatic-sc">Amatic SC</p>
           <p class="font-option saira-stencil-one">Saira Stencil One</p>
         </section>
-        <section class="color-gallery">
+        <section class="color-gallery" id="color-gallery">
           <div class="close-color">&times</div>
-          <input class="color-picker" type="color" value="#0077b5" />
+          <input class="color-picker" id="color" type="color" value="#ffffff" />
           <p class="color-picker-lable" id="changeble-text">COLOR PICKER</p>
         </section>
+        <section class="color-gallery-info"></section>
       </section>
       <!-- end hero -->
+      <section class="title changeble-text">EYTHAN KRAMM</section>
+      <section class="right-arrow">
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+      </section>
       <section class="social-media">
         <a href="https://www.facebook.com/emanuelkramm?ref=bookmarks">
           <div class="facebook">
@@ -124,5 +167,5 @@
     </div>
     <!-- end social-media-container -->
   </body>
-  <script src="./index.js"></script>
+  <script src="../js/index.js"></script>
 </html>
