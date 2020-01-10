@@ -13,7 +13,7 @@
 }
 
 #edit-btn {
-  color: #9c9c9c;
+  color: #e8e8e8;
   font-size: 60px;
   margin-left: 25px;
   margin-top: 18px;
@@ -30,8 +30,26 @@
   left: -999em;
 }
 
+#home-btn {
+  color: #e8e8e8;
+  font-size: 60px;
+  margin-left: 25px;
+  margin-top: 18px;
+  z-index: 15;
+}
+
+#home-btn:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.home-btn-hide {
+  position: absolute;
+  left: -999em;
+}
+
 #about-me-btn {
-  color: #9c9c9c;
+  color: #e8e8e8;
   font-size: 50px;
   margin-left: 25px;
   margin-top: 18px;
@@ -49,7 +67,7 @@
 }
 
 #portfolio-btn {
-  color: #9c9c9c;
+  color: #e8e8e8;
   font-size: 50px;
   margin-left: 25px;
   margin-top: 18px;
@@ -67,7 +85,7 @@
 }
 
 #contact-me-btn {
-  color: #9c9c9c;
+  color: #e8e8e8;
   font-size: 50px;
   margin-left: 25px;
   margin-top: 18px;

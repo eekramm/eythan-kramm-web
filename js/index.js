@@ -1,23 +1,42 @@
+// ------------------------ MAIN MENU SECTION ---------------------
+// MAIN MENU
 // opens and closes main menu
 let menu = document.querySelector(".menu");
 let menuIcon = document.querySelector(".fa-pencil-square");
 let closeMenu = document.querySelector(".close-menu");
+let homeIcon = document.querySelector(".fa-home");
 let aboutMeIcon = document.querySelector(".fa-user-circle-o");
 let portfolioIcon = document.querySelector(".fa-briefcase");
 let contactIcon = document.querySelector(".fa-address-book-o");
+let menuIsOpen = document.getElementsByClassName("menu-show");
 
 function toggleMenu() {
   menu.classList.toggle("menu-show");
   menuIcon.classList.toggle("edit-btn-hide");
+  homeIcon.classList.toggle("home-btn-hide");
   aboutMeIcon.classList.toggle("about-me-btn-hide");
   portfolioIcon.classList.toggle("portfolio-btn-hide");
   contactIcon.classList.toggle("contact-me-btn-hide");
-  console.log("Clicked");
 }
+
+// closes menu when click is outside of the open menu
+document.addEventListener("click", function(event) {
+  let isClickInside = menu.contains(event.target);
+  let menuIconBeingClicked = menuIcon.contains(event.target);
+
+  if (!isClickInside && menuIsOpen.length == 1 && !menuIconBeingClicked) {
+    console.log("is outside");
+    toggleMenu();
+  } else if (isClickInside && menuIsOpen.length == 1) {
+    console.log("is inside");
+  }
+});
 
 closeMenu.addEventListener("click", toggleMenu);
 menuIcon.addEventListener("click", toggleMenu);
 
+// ------------------------ IMG GALLERY SECTION ---------------------
+// IMG GALLERY
 // opens and closes the img gallery
 let gallery = document.querySelector(".img-gallery");
 let galleryButton = document.querySelector(".back-ground-img");
@@ -27,8 +46,8 @@ let galleryIsOpen = document.getElementsByClassName(
 );
 
 function toggleGallery() {
+  console.log(galleryIsOpen);
   gallery.classList.toggle("back-ground-img-gallery-show");
-  // console.log(`test equals ${test.length}`);
 }
 
 function closeGalleryWithMenu() {
@@ -37,10 +56,32 @@ function closeGalleryWithMenu() {
   }
 }
 
+function closeGalleryWithFontOpen() {
+  if (galleryIsOpen.length == 1) {
+    gallery.classList.toggle("back-ground-img-gallery-show");
+  }
+}
+
+function closeGalleryWithColorOpen() {
+  if (galleryIsOpen.length == 1) {
+    gallery.classList.toggle("back-ground-img-gallery-show");
+  }
+}
+
+function closeGalleryWithMenuButton() {
+  if (galleryIsOpen.length == 1) {
+    gallery.classList.toggle("back-ground-img-gallery-show");
+  }
+}
+
+galleryButton.addEventListener("click", closeColorWithGalleryOpen);
+galleryButton.addEventListener("click", closeFontWithGalleryOpen);
 galleryButton.addEventListener("click", toggleGallery);
 closeGallery.addEventListener("click", toggleGallery);
 closeMenu.addEventListener("click", closeGalleryWithMenu);
 
+// ------------------------ FONT GALLERY SECTION ---------------------
+// FONT GALLERY
 // opens and closes the font gallery
 let fontGallery = document.querySelector(".font-gallery");
 let fontGalleryButton = document.querySelector(".font");
@@ -57,10 +98,32 @@ function closeFontGalleryWithMenu() {
   }
 }
 
+function closeFontWithGalleryOpen() {
+  if (fontGalleryIsOpen.length == 1) {
+    fontGallery.classList.toggle("font-gallery-show");
+  }
+}
+
+function closeFontWithColorOpen() {
+  if (fontGalleryIsOpen.length == 1) {
+    fontGallery.classList.toggle("font-gallery-show");
+  }
+}
+
+function closeFontWithMenuButton() {
+  if (fontGalleryIsOpen.length == 1) {
+    fontGallery.classList.toggle("font-gallery-show");
+  }
+}
+
+fontGalleryButton.addEventListener("click", closeColorWithFontOpen);
+fontGalleryButton.addEventListener("click", closeGalleryWithFontOpen);
 fontGalleryButton.addEventListener("click", toggleFontGallery);
 closeFontGallery.addEventListener("click", toggleFontGallery);
 closeMenu.addEventListener("click", closeFontGalleryWithMenu);
 
+// ------------------------ COLOR PICKER SECTION ---------------------
+// COLOR PICKER
 // opens and closes the color picker
 let colorPicker = document.querySelector(".color-gallery");
 let colorPickerButton = document.querySelector(".color-scheme");
@@ -77,6 +140,26 @@ function closeColorPickerWithMenu() {
   }
 }
 
+function closeColorWithFontOpen() {
+  if (colorGalleryIsOpen.length == 1) {
+    colorPicker.classList.toggle("color-gallery-show");
+  }
+}
+
+function closeColorWithGalleryOpen() {
+  if (colorGalleryIsOpen.length == 1) {
+    colorPicker.classList.toggle("color-gallery-show");
+  }
+}
+
+function closeColorWithMenuButton() {
+  if (colorGalleryIsOpen.length == 1) {
+    colorPicker.classList.toggle("color-gallery-show");
+  }
+}
+
+colorPickerButton.addEventListener("click", closeGalleryWithColorOpen);
+colorPickerButton.addEventListener("click", closeFontWithColorOpen);
 colorPickerButton.addEventListener("click", toggleColorPicker);
 closeColorPicker.addEventListener("click", toggleColorPicker);
 closeMenu.addEventListener("click", closeColorPickerWithMenu);
@@ -92,7 +175,9 @@ function showColorPickerInfo() {
 colorPickerInfoTriger.addEventListener("mouseenter", showColorPickerInfo);
 colorPickerInfoTriger.addEventListener("mouseleave", showColorPickerInfo);
 
-// opens and closes site-menu
+// ------------------------ SITE MENU SECTION ---------------------
+// SITE MENU
+// opens and closes site-menu CHANGES FROM EDIT MENU TO SITE MENU AND BACK
 let bgiButn = document.querySelector(".back-ground-img");
 let fButn = document.querySelector(".font");
 let csButn = document.querySelector(".color-scheme");
@@ -113,6 +198,9 @@ function toggleSiteMenu() {
   contactMe.classList.toggle("contact-me-show");
 }
 
+menuButn.addEventListener("click", closeColorWithMenuButton);
+menuButn.addEventListener("click", closeGalleryWithMenuButton);
+menuButn.addEventListener("click", closeFontWithMenuButton);
 menuButn.addEventListener("click", toggleSiteMenu);
 collapseMenu.addEventListener("click", toggleSiteMenu);
 
@@ -133,13 +221,14 @@ collapseMenu.addEventListener("click", toggleSiteMenu);
 // console.log(currentVal);
 
 let allNewImages = document.querySelectorAll(".image-option");
-// console.log(allNewImages);
-
 
 allNewImages.forEach(element => {
   function changeImage() {
-    let newImageArry = element.src.split('0/');
-    document.getElementById('hero').style.backgroundImage = 'url(../' + newImageArry[1] + ')';
+    let newImageArry = element.src.split("0/");
+    document.getElementById("hero").style.backgroundImage =
+      "url(../" + newImageArry[1] + ")";
   }
   element.addEventListener("click", changeImage);
+  element.addEventListener("click", toggleMenu);
+  element.addEventListener("click", toggleGallery);
 });

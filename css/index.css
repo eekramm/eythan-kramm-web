@@ -38,7 +38,7 @@ body {
 
 /* styles the menu button */
 #edit-btn {
-  color: #9c9c9c;
+  color: #e8e8e8;
   font-size: 60px;
   margin-left: 25px;
   margin-top: 18px;
@@ -57,8 +57,26 @@ body {
   left: -999em;
 }
 
+#home-btn {
+  color: #e8e8e8;
+  font-size: 60px;
+  margin-left: 25px;
+  margin-top: 18px;
+  z-index: 15;
+}
+
+#home-btn:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.home-btn-hide {
+  position: absolute;
+  left: -999em;
+}
+
 #about-me-btn {
-  color: #9c9c9c;
+  color: #e8e8e8;
   font-size: 50px;
   margin-left: 25px;
   margin-top: 18px;
@@ -76,7 +94,7 @@ body {
 }
 
 #portfolio-btn {
-  color: #9c9c9c;
+  color: #e8e8e8;
   font-size: 50px;
   margin-left: 25px;
   margin-top: 18px;
@@ -94,7 +112,7 @@ body {
 }
 
 #contact-me-btn {
-  color: #9c9c9c;
+  color: #e8e8e8;
   font-size: 50px;
   margin-left: 25px;
   margin-top: 18px;
@@ -548,7 +566,7 @@ body {
 
 .title {
   /* border: 1px solid red; */
-  color: #363636;
+  color: #e8e8e8;
   display: flex;
   font-size: 100px;
   justify-content: center;
@@ -557,7 +575,7 @@ body {
 }
 
 .right-arrow {
-  color: rgba(54, 54, 54, 0.5);
+  color: rgba(232, 232, 232, 0.5);
   font-size: 250px;
   position: fixed;
   width: 200px;
@@ -566,7 +584,7 @@ body {
 .right-arrow:hover {
   cursor: pointer;
   /* color: rgba(255, 255, 255, 0.3); */
-  color: #9c9c9c;
+  color: #e8e8e8;
 }
 
 .social-media {
