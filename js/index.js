@@ -28,7 +28,7 @@ let galleryIsOpen = document.getElementsByClassName(
 
 function toggleGallery() {
   gallery.classList.toggle("back-ground-img-gallery-show");
-  console.log(`test equals ${test.length}`);
+  // console.log(`test equals ${test.length}`);
 }
 
 function closeGalleryWithMenu() {
@@ -131,3 +131,15 @@ collapseMenu.addEventListener("click", toggleSiteMenu);
 // console.log(getCurrentVal.value);
 // console.log(defaultVal);
 // console.log(currentVal);
+
+let allNewImages = document.querySelectorAll(".image-option");
+// console.log(allNewImages);
+
+
+allNewImages.forEach(element => {
+  function changeImage() {
+    let newImageArry = element.src.split('0/');
+    document.getElementById('hero').style.backgroundImage = 'url(../' + newImageArry[1] + ')';
+  }
+  element.addEventListener("click", changeImage);
+});

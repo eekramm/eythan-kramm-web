@@ -28,7 +28,10 @@ body {
 /* the main background image of the page */
 .hero {
   /* border: 10px solid red; */
-  background-image: url(../images/bi-curl.jpeg);
+  background-image: url(../images/rustic2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
   width: 100%;
 }
